@@ -1,79 +1,67 @@
-[![](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netlify/netlifycms)
+# Ed: A Jekyll Theme for Minimal Editions
 
-# Jekyll + Netlify CMS with Netlify Identity
+[![Build Status](https://travis-ci.org/minicomp/ed.svg?branch=master)](https://travis-ci.org/minicomp/ed) [![Gem Version](https://badge.fury.io/rb/ed..svg)](https://badge.fury.io/rb/ed.)
 
-This is the basic Jekyll starter site, with Netlify CMS integrated and using Netlify Identity for
-authentication.
+![Sample Ed screenshot](https://github.com/minicomp/ed/blob/master/assets/screenshot-home.png)
 
-## Getting started
 
-Use our deploy button to get your own copy of the repository:
+## Introduction
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/jekyll-netlify-cms&stack=cms)
+Ed is a [Jekyll](https://jekyllrb.com/) theme designed for textual editors based on
+[minimal computing](http://go-dh.github.io/mincomp/) principles, and focused on legibility,
+durability, ease and flexibility.
 
-This will setup everything needed for running the CMS:
+One of our most pressing and ever-evolving needs as scholars is to pass on our textual artifacts
+from one generation to another. The art of textual editing, among other practices, has helped many
+cultures to remember and interpret for centuries. Alas, that art is practiced and encouraged in its
+highest form by a dwindling number of scholars. In a digital environment the problem is compounded
+by the difficulties of the medium. While vast repositories and "e-publications" appear on the
+online scene yearly, very few manifest a textual scholar's disciplined attention to detail. In
+contrast, most textual scholars who have made the leap to a rigorous digital practice have focused
+on markup, relying on technical teams to deploy and maintain their work. This makes your average
+scholarly digital edition a very costly and therefore limited affair.
 
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Netlify CMS
+As we see it, a minimal edition is one that aims to reduce the size and complexity of the back and
+front end while flattening the learning curves for the user and the producer. Out of the box, the Ed
+theme can help you build a simple reading edition, or a traditional scholarly edition with footnotes
+and a bibliography, without breaking the bank. In our estimate, these are the two most immediately
+useful type of editions for editors and readers. An edition produced with Ed consists of static
+pages whose rate of decay is substantially lower than database-driven systems. As an added bonus,
+these static pages require less bandwidth. Our hope is that our approach can help beginners and
+veterans deploy beautiful editions with less effort, and that it can help us teach a 'full stack'
+[in one academic semester](https://github.com/susannalles/MinimalEditions/blob/master/README.md),
+while allowing us to care for our projects at less cost, and perhaps, just perhaps, to generate
+high-quality editions on github.io in large quantities based on the
+[git-lit](http://jonreeve.com/2015/09/introducing-git-lit/) model by Jonathan Reeve. We're coming
+for you, Kindle!
 
-The email address associated with your Netlify account will receive an email inviting you as an
-Identity user - click Accept in the email to set your new password, then navigate to `/admin` on
-your site to log in.
 
-Now you're all set, and you can start editing content!
+## Sample Ed editions.
 
-**Note:** if you switch the repo that was created to private, you'll need to regenerate your token,
-as the token generated using the deploy to Netlify button can only access public repositories. To
-regenerate your token, head to "Settings" in your Netlify site dashboard, go to the "Identity"
-section, then scroll to "Services" where you'll see an "Edit settings" button. Click that and you'll
-see a text link to "Generate access token in GitHub".
+- [Our sample site](http://minicomp.github.io/ed/) is the first edition built with Ed.
+- [Fugitive Verses](http://fugitiverses.viraltexts.org/): Popular Reprinted Poetry from Nineteenth Century Newspapers
+- [mini lazarillo](http://minilazarillo.github.io/): A minimal edition of the *Lazarillo de Tormes*
+- [Making and Knowing](https://cu-mkp.github.io/GR8975-edition/): The BnF Ms Fr 640 in Translation
+- [Daisy Miller: A Comedy in Three Acts](https://britaneeelizabeth.github.io/ed/texts/DaisyMillerPlay/)
 
-## Local Development
 
-Clone this repository and run:
+## Current Features
 
-```bash
-bundle install
-bundle exec jekyll server --watch
-```
+- Templates for narrative, drama and poetry
+- Responsive design for mobile phones, tablets and PCs.
+- Relatively easy to learn and teach
+- Works well in high- or low- bandwidth scenarios
+- Easier for digital archives and libraries to preserve
+- Open source, open access
+- Unobtrusive footnotes
+- Metadata in Dublin Core and OpenGraph to play nice with Zotero, libraries and social media.
+- Automatic table of content generation
+- Simple search functionality
+- Annotations via [hypothes.is](https://hypothes.is/)
+- Optional: Ability to generate well-formatted bibliographies and linked citations
 
-Now navigate to [localhost:4000](http://localhost:4000/) to preview the site, and
-[localhost:4000/admin](http://localhost:4000/admin) to log into the CMS.
 
-## Authenticating without Netlify Identity
+## Installing and using Ed
 
-Netlify provides basic OAuth so you can log in to Netlify CMS with your GitHub profile directly if
-you prefer not to use Netlify Identity. To do so, go to [the GitHub developer application
-screen](https://github.com/settings/developers) and **register new application**. The Authorization
-callback URL you'll need to enter is `https://api.netlify.com/auth/done`. 
-
-Once you've set up the application, go back to your Netlify site dashboard, navigate to the
-**Access** tab. Then fill in your new Client ID and Client Secret in the Github Authentication
-Provider section and check the **Enable GitHub** box.
-
-You'll then need to update the `backend` settings at the top of the `admin/config.yml` file in your
-site repo:
-
-```yaml
-backend:
-  name: github
-  repo: username/repo # your GitHub username and repository name, separated by a slash
-  branch: master # optional, default value is "master"
-```
-
-Now anybody with write access to your GitHub repository can log in at yoursite.netlify.com/admin
-and use the CMS.
-
-**Enjoy!**
-
-## Bug reports, feature requests, etc
-
-We love feedback, contributions, better documentation, tutorials, general comments,
-random hatemail, rants, love, crazy ideas, etc, etc!
-
-Contact us at [any of netlify's normal channels](https://www.netlify.com/contact) and
-open issues or pull requests for Netlify CMS at [the netlify-cms GitHub
-repo](https://github.com/netlify/netlify-cms). If you need realtime help with setting up Netlify
-CMS, you can reach out in the [Netlify CMS Gitter](https://gitter.im/netlify/netlifycms).
+To learn how to install and begin using Ed, please visit our
+[documentation page](http://minicomp.github.io/ed/documentation).
